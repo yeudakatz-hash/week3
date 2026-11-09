@@ -7,7 +7,11 @@ from classes.customer import Customers, Order
 from classes.BankAccount import BankAccount
 from classes.user import User
 from classes.course import Course
-
+from classes.manager import Manager
+from classes.employee import Employee
+from classes.truck import Truck
+from classes.man import Man
+from classes.emp import Emp
 
 
 dana = Person("Dana" , 24 , "hgtrdcv@gtrf")
@@ -100,3 +104,27 @@ try:
     course.enroll("Dana")
 except ValueError as error:
     print("error:", error)
+
+
+
+
+dana = Employee("Dana", 12000)
+avi = Manager("Avi", 20000)
+print(dana.describe())
+print(avi.describe())
+print(avi.manage(5))
+
+
+
+
+truck = Truck("volvo", 1000)
+truck.load(600)
+print(truck.brand, truck.wheels, truck.load_kg)
+try:
+    truck.load(500)
+except ValueError as error:
+    print("error: ", error)
+
+
+print(Emp("Dana", 12000).monthly_cost())
+print(Man("Avi", 20000, 3000).monthly_cost())
