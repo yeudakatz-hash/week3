@@ -92,11 +92,11 @@ print(user.age)
 
 
 
-# course = Course("PY101", "Intro To Python", 2)
-# for student in ["Dana", "Avi", "Noa"]:
-#     print(student, course.enroll(student))
-# print(course)
-# try:
-#     course.enroll("Dana")
-# except ValueError as error:
-#     print("error:", error)
+course = Course("PY101", "Intro To Python", 2)
+for student in ["Dana", "Avi", "Noa"]:
+    print(student, course.enroll(student))
+print(course)
+try:
+    course.enroll("Dana")
+except ValueError as error:
+    print("error:", error)
